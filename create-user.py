@@ -3,9 +3,12 @@
 import subprocess
 import sys
 import argparse
+from pprint import pprint
+from pssh.clients.native import ParallelSSHClient
+
 
 parser = argparse.ArgumentParser()
-
+hosts = []
 # xargs for input
 # user info
 # public ssh key
@@ -30,6 +33,12 @@ if __name__=='__main__':
     print("pubkey path = ", args.pubkey_path)
     print("shell = ", args.shell)
     print("host = ", args.host)
-
+    hosts.append(args.host)
     # connect to ssh server and create user
+    #hosts = ['myhost1', 'myhost2']
+    client = ParallelSSHClient(hosts)
 
+    output = client.run_command('uname')
+    for host, host_output in output.items():
+        for line in host_output.stdout:
+            print(line)
