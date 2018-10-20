@@ -6,7 +6,7 @@ the system you are using for the project.
 ## Installing python
 
 Python can be downloaded and installed via: https://www.python.org/downloads/
-Before deciding to install from source, please not that  many operating systems 
+Before deciding to install from source, please note that many operating systems 
 already have python installed by default, e.g.
 Mac OS X (BSD Unix based)
 Different varieties of linux OS 
@@ -24,19 +24,22 @@ it is recommended that the native package manager is used, if possible, in
 order to install python. 
 
 e.g. 
+
 ubuntu: apt-get or apt (ubuntu 16.04+)
 suse, red hat, fedora: yum
 arch: pacman
 (all linux flavors will not be explored, you could discover the package
 manager with google or duckduckgo)
+
 Windows: I have heard chocolately is nice,
-but check out alternatives: https://en.wikipedia.org/wiki/List_of_software_package_management_systems#Windows
+but check out alternatives: 
+https://en.wikipedia.org/wiki/List_of_software_package_management_systems#Windows
 Not to mention, one may need to manually set the path in Windows
 
 To discover which python is installed, please use your OS's search features,
 e.g.:
 Linux/Unix: which <name>
-Windows: find function or search bar or start/run 
+Windows: use the find function or search bar or start/run 
 
 ## installing a virtualenv
 
