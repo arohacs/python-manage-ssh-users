@@ -74,6 +74,7 @@ Instructions
 To exit the virtual environment:
 type: deactivate
 
+For more information on python and venv: https://wiki.archlinux.org/index.php/Python/Virtual_environment`
 ### windows
 
 use the above method on the CLI to install a venv
@@ -88,5 +89,42 @@ Found at https://github.com/ParallelSSH/parallel-ssh
 Assuming one has python installed, this is trivial:
 
 pip install parallel-ssh
+
+## clone this repo
+
+Either use ssh:
+git@github.com:arohacs/python-manage-ssh-users.git
+Or use https:
+https://github.com/arohacs/python-manage-ssh-users.git
+
+## Running the script
+
+You'll be prompted for multiple pieces of information once running the script,
+such as:
+user
+password
+key
+hostname
+
+Feel free to edit as you like for your own usage, but note that you'll want to 
+either make a branch, or copy the edited files outside of the git repo as 
+they'd be overwritten on future pulls of master
+
+To make a branch:
+git checkout -b <branch_name>
+
+### local or cloud server environment
+
+You'll want to either set up a local virtual environment, connect to physical
+servers, or use a cloud environment. Possibly the quickest way to test  
+this script is to use docker or virtual machines.
+
+Just like the python install above, there are many different ways to install
+docker. I'd recommend using the package manager of the OS.
+
+Regarding virtual machines, I find virtualbox to be free and relatively reasonable
+to set up. 
+ 
+
 
 
