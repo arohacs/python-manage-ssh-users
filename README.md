@@ -79,12 +79,10 @@ For more information on python and venv: https://wiki.archlinux.org/index.php/Py
 
 use the above method on the CLI to install a venv
 
-## installing parallel-ssh
+## installing fabric 
 
 In order to test and run this project, one will need to install the following:
-parallel-ssh
-
-Found at https://github.com/ParallelSSH/parallel-ssh
+fabric
 
 Assuming one has python installed, this is trivial:
 
