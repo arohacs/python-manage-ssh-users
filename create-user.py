@@ -4,15 +4,9 @@ import subprocess
 import sys
 import argparse
 from pprint import pprint
-from pssh.clients.native import ParallelSSHClient
-
+from fabric import Connection
 
 parser = argparse.ArgumentParser()
-hosts = []
-# xargs for input
-# user info
-# public ssh key
-# host info
 
 # create user on specified host
 # user connecting to host should have user management rights
@@ -25,6 +19,12 @@ parser.add_argument("shell", help="enter shell of remote user")
 parser.add_argument("host", help="enter remote hostname or ip address")
 args = parser.parse_args()
 
+def create_user(username, password, shell):
+    pass
+
+def set_ssh_key(username, password, pubkey):
+    pass
+
 if __name__=='__main__':
     # print args -- debug
     print("starting...")
@@ -33,12 +33,13 @@ if __name__=='__main__':
     print("pubkey path = ", args.pubkey_path)
     print("shell = ", args.shell)
     print("host = ", args.host)
-    hosts.append(args.host)
+    #hosts.append(args.host)
     # connect to ssh server and create user
-    #hosts = ['myhost1', 'myhost2']
-    client = ParallelSSHClient(hosts)
 
-    output = client.run_command('uname')
-    for host, host_output in output.items():
-        for line in host_output.stdout:
-            print(line)
+    admin_user = 'jack'
+    admin_password = 'cuc4il1n'
+    #env.forward_agent = True
+    #env.user = 'user'
+    key_filename = ("/home/%s/.ssh/%s" % (args.username, args.pubkey_path))
+
+    print (key_filename)
